@@ -1,0 +1,5 @@
+<%= form_for @pari do |f| %>
+  <%= f.select :match_id, @matchs.map{ |c| [c.team, c.id] } %>
+  <%= f.select :choice, ['Gagné','Nul', 'Perdu'].map{ |c| [c, c] } %>
+  <%= f.submit "Créer un pari", class: "btn btn-lg btn-primary"%>
+<% end %>

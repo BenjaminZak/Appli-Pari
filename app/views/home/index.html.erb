@@ -1,0 +1,10 @@
+<% @matchs.each do |match| %>
+	<%= match.team %>
+	<%= match.date %>
+<% end -%>
+
+<% @paris.each do |pari| %>
+	<%= link_to "Voir le pari #{pari.id}", pari  %>
+<% end -%>
+
+<%= link_to "Créer un pari", new_pari_path  %>
